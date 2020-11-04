@@ -1,0 +1,254 @@
+<div class="container" ng-controller="cat1_ctrl">
+    <div class="properties-listing spacer">
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 ">
+                <!--
+    
+      <div class="search-form"><h4><span class="glyphicon glyphicon-search"></span> Search for</h4>
+        <input type="text" class="form-control" placeholder="Search of Properties">
+        <div class="row">
+                <div class="col-lg-5">
+                  <select class="form-control">
+                    <option>Buy</option>
+                    <option>Rent</option>
+                    <option>Sale</option>
+                  </select>
+                </div>
+                <div class="col-lg-7">
+                  <select class="form-control">
+                    <option>Price</option>
+                    <option>$150,000 - $200,000</option>
+                    <option>$200,000 - $250,000</option>
+                    <option>$250,000 - $300,000</option>
+                    <option>$300,000 - above</option>
+                  </select>
+                </div>
+              </div>
+    
+              <div class="row">
+              <div class="col-lg-12">
+                  <select class="form-control">
+                    <option>Property Type</option>
+                    <option>Apartment</option>
+                    <option>Building</option>
+                    <option>Office Space</option>
+                  </select>
+                  </div>
+              </div>
+              <button class="btn btn-primary">Find Now</button>
+              <button class="btn btn-primary">Find Now</button>
+              <button class="btn btn-primary">Find Now</button>
+              <button class="btn btn-primary">Find Now</button>
+    
+      </div>
+    
+    -->
+
+                <div class="hot-properties hidden-xs">
+                    <h4>Nos catégories</h4>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/spcp.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="#!cat1">Normal Handle Bag</a></h5>
+                            <p class="price">MATER-Bi</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/cps.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="#!cat2">D-cut Bag</a></h5>
+                            <p class="price">HDPE</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/spcp.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="#!cat3">Reversed Box Bag</a></h5>
+                            <p class="price">HDPE - LPDE</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/b.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="#!cat4">T-Shirt Bag</a></h5>
+                            <p class="price">HDPE - LPDE</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-4 col-sm-5"><img src="images/properties/cgg.jpg"
+                              class="img-responsive img-circle" alt="properties"></div>
+                      <div class="col-lg-8 col-sm-7">
+                          <h5><a href="#!cat5">shoes Bag</a></h5>
+                          <p class="price">HDPE - LPDE</p>
+                      </div>
+                  </div>
+                    <!--<div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/s.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="categorie5.html">Sac Poubelle</a></h5>
+                            <p class="price">HDPE - LPDE</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-5"><img src="images/properties/cgg.jpg"
+                                class="img-responsive img-circle" alt="properties"></div>
+                        <div class="col-lg-8 col-sm-7">
+                            <h5><a href="categorie6.html">Sac de Congélation</a></h5>
+                            <p class="price">HDPE</p>
+                        </div>
+                    </div>-->
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="col-lg-9 col-sm-8">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        
+                        <div id="custom-search-input">
+                          <div class="input-group col-md-12">
+                              <input type="text" class="  search-query form-control" placeholder="filter" ng-model="filterbox" />
+                              <span class="input-group-btn">
+                                  <button class="btn btn-danger" type="button">
+                                      <span class=" glyphicon glyphicon-search"></span>
+                                  </button>
+                              </span>
+                          </div>
+                      </div>
+                </div>
+                <br><hr><br>
+                <div class="row">
+
+                    <!-- properties -->
+                    <div class="col-lg-4 col-sm-6" ng-repeat="item in handles | filter:filterbox">
+                        <div class="properties">
+                            <div class="hovereffect">
+                            <div class="image-holder"><img src="images/properties/bio/2.jpg" class="img-responsive"
+                                    alt="properties">
+                                <div class="overlay">
+                                    <h2>Sac handle</h2>
+                                    <h4><a href="produitc11.html">{{item.name}}</a></h4>
+                                    
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                        Demander devis
+                                      </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                            <!-- <div class="listing-detail"><span data-toggle="tooltip" data-placement="bottom" data-original-title="Bed Room">5</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Living Room">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Parking">2</span> <span data-toggle="tooltip" data-placement="bottom" data-original-title="Kitchen">1</span> </div>
+            -->                        <center>
+                <h4><a href="produitc11.html">{{item.size}}</a></h4>
+                <a class="btn btn-primary" href="produitc11.html"> Details</a>
+            </center>
+                        </div>
+
+
+                    </div>
+                    <!-- properties -->
+
+
+                    <!-- properties -->
+                    <!-- properties -->
+                  
+
+
+
+
+
+
+
+
+                    <!--
+          <div class="center">
+    <ul class="pagination">
+              <li><a href="#">«</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+    </div>
+    -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">DEMANDE DE DEVIS EXPRESS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+
+
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">largeur:</label>
+                  <select class="form-control" id="largeur" ng-model="largeur" ng-init="largeur=0" >
+                    <option value="0">0</option>
+                    <option value="1">22</option>
+                    <option value="2" >27</option>
+                    <option value="3">29</option>
+                    <option value="4">31</option>
+                    <option value="5">32</option>
+                    
+                      </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Hauteur:</label>
+                    <select class="form-control" id="Hauteur" ng-model="Hauteur" ng-init="Hauteur=0">
+                        <option value="0">0</option>
+                        <option value="1">37</option>
+                        <option value="2" >40</option>
+                        <option value="3">45</option>
+                        <option value="4">50</option>
+                        <option value="5">50</option>
+                        </select>
+                  </div>
+                  <div class="alert alert-danger">Unit Price : <b>{{price[largeur][Hauteur]}}</b></div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Quantite:</label>
+                    <input type="text" class="form-control" id="quan"  ng-model="quan" ng-init="quan=0">
+                  </div>
+                <div class="alert alert-danger">total price : <b>{{price[largeur][Hauteur]*quan}}</b></div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-inline-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-inline-primary">Validate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
